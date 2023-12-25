@@ -29,14 +29,10 @@ const submit = async () => {
     method: 'POST',
     body: form
   }).then(r => {
-    r = JSON.parse(r)
-    const resp = r.message
-    if(resp === 'ok'){ 
-      const user = r.user
-      etoken.value = user.token
-      mainStore.setUser({
-        name: user.name,
-      })
+    const resp = r.success
+    if(resp){ 
+      etoken.value = r.token
+      mainStore.setUserName(r.name)
       router.push('/')       
     }else{
       alert(resp)
@@ -92,13 +88,6 @@ const submit = async () => {
               color="success"
               small
               label="Войти"
-            />
-            <BaseButton
-              to="/register"
-              color="info"
-              outline
-              small
-              label="Регистрация"
             />
           </BaseButtons>
         </template>

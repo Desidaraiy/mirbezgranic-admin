@@ -9,15 +9,15 @@ import SectionMain from '@/components/SectionMain.vue'
 import CardBoxWidget from '@/components/CardBoxWidget.vue'
 import { useRouter } from 'vue-router'
 
-const router = useRouter()
-
 const mainStore = useMainStore()
 
-const isClientsEmpty = computed(() => mainStore.clients.length === 0)
-
-onMounted(() => {
+onMounted( async () => {
   mainStore.fetchClients()
 })
+
+const isClientsEmpty = computed(() => mainStore?.clients.length == 0)
+
+
 </script>
 
 <template>

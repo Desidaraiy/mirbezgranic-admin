@@ -78,6 +78,9 @@ export const useMainStore = defineStore('main', {
         .then(data => {
           this.currentClient = data.user;
         });
+    },
+    setUserName(payload) {
+      this.userName = payload
     }
 
   }

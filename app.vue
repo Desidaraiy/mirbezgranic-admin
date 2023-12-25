@@ -8,13 +8,6 @@ useHead({
     
     return titleChunk ? `${titleChunk} - ${titleBase}` : titleBase
   },
-  link: [
-    {
-      rel: 'stylesheet',
-      crossOriginIsolated: true,
-      href: '/_nuxt/entry.084cd1ce.css'
-    }
-  ]
 })
 
 const styleStore = useStyleStore()
