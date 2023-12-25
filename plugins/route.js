@@ -9,7 +9,7 @@ export default defineNuxtPlugin(() => {
             default:
             const token = etoken.value
             const data = { token }
-            $fetch('https://api.mirbezgranic-novsu.ru:3000/admin/checkAuth', {
+            $fetch('https://api.mirbezgranic-novsu.ru/admin/checkAuth', {
                 method: 'POST',
                 body: data
             }).then(r => {
