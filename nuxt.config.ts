@@ -27,9 +27,4 @@ export default defineNuxtConfig({
     host: 'localhost',
     port: 5000
   },
-  head: {
-    link: [ 
-      { rel: 'stylesheet', href: '/_nuxt/entry.084cd1ce.css', crossorigin: 'anonymous' },],
-    
-  },
 })
