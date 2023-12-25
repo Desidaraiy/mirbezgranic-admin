@@ -23,5 +23,6 @@ export default defineNuxtConfig({
   ],
   // middleware: ["route"]
   plugins: ['~/plugins/route'],
-
+  port: 5000,
+  url: 'http://localhost:5000'
 })
