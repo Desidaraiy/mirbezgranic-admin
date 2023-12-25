@@ -14,7 +14,7 @@ export default defineNuxtPlugin(() => {
                 body: data
             }).then(r => {
                 r = JSON.parse(r)
-                const resp = r.successs
+                const resp = r.success
                 if (!resp) {
                     return navigateTo('/login')
                 }
