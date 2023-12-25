@@ -2,7 +2,7 @@ import { defineNuxtConfig } from 'nuxt'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   buildModules: [
     '@pinia/nuxt',
   ],
@@ -22,6 +22,6 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss'
   ],
   // middleware: ["route"]
-  plugins: ['~/plugins/route']
+  plugins: ['~/plugins/route'],
 
 })
